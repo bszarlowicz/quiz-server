@@ -1,5 +1,2 @@
-Programowanie
-Możliwość posiadania wielu form
-asa
-asa
-aaa
+maciek A A B C A
+antek A B C D A

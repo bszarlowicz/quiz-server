@@ -1,1 +1,2 @@
-Score: 0
+maciek score: 3
+antek score: 2

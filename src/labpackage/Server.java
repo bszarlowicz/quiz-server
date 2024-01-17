@@ -9,7 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Server {
-    private static final int PORT = 12345;
+    private static final int PORT = 3000;
     private static final int MAX_CLIENTS = 250;
     private static final String QUESTION_FILE = "bazaPytan.txt";
     private static final String ANSWER_FILE = "bazaOdpowiedzi.txt";
@@ -24,6 +24,7 @@ public class Server {
             ExecutorService executorService = Executors.newFixedThreadPool(MAX_CLIENTS);
 
             while (true) {
+
                 Socket clientSocket = serverSocket.accept();
                 executorService.submit(() -> handleClient(clientSocket));
             }
@@ -41,13 +42,15 @@ public class Server {
         ) {
             int score = 0;
 
+            String name;
+            name = in.readLine();
+            answerWriter.write(name);
             for (Question question : questions) {
-                out.println(question.getQuestion());
-                out.println("A. " + question.getOptionA());
-                out.println("B. " + question.getOptionB());
-                out.println("C. " + question.getOptionC());
-
+                out.println(question.getQuestion() + "," + question.getOptionA() + "," + question.getOptionB() + "," + question.getOptionC() + "," + question.getOptionD() + "," + question.getCorrectAnswer());
+                System.out.println(question);
                 long startTime = System.currentTimeMillis();
+
+
                 String studentAnswer;
                 while ((studentAnswer = in.readLine()) == null) {
                     if (System.currentTimeMillis() - startTime > 30000) { // 30 seconds timeout
@@ -55,13 +58,16 @@ public class Server {
                     }
                 }
 
+
                 if (studentAnswer != null && studentAnswer.equalsIgnoreCase(question.getCorrectAnswer())) {
                     score++;
                 }
-                answerWriter.write(studentAnswer + System.lineSeparator());
-            }
 
-            resultWriter.write("Score: " + score + System.lineSeparator());
+                answerWriter.write(" " + studentAnswer);
+            }
+            answerWriter.write(System.lineSeparator());
+
+            resultWriter.write(name + " score: " + score + System.lineSeparator());
             resultWriter.flush();
             clientSocket.close();
         } catch (IOException e) {
@@ -76,7 +82,7 @@ public class Server {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
-                Question question = new Question(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                Question question = new Question(parts[0], parts[1], parts[2], parts[3],parts[4], parts[5]);
                 questions.add(question);
             }
         } catch (IOException e) {
