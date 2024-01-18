@@ -1,5 +1,6 @@
-antek A B C A A
-maciek A A A A A
-bartek A A A A D
-piotrek A A C D B
-patryk A B C D A
+antek - a b c d e 
+bartek - a b a a a 
+antek - a b c a a 
+bartek - a b c d a 
+maciek - c a b a c 
+antek - a b a b a 

@@ -1,7 +1,8 @@
 package labpackage;
 
 public class Question {
-    private String question;
+
+    public String question;
     private String optionA;
     private String optionB;
     private String optionC;
@@ -17,28 +18,11 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public String getQuestion() {
-        return question;
-    }
-
-    public String getOptionA() {
-        return optionA;
-    }
-
-    public String getOptionB() {
-        return optionB;
-    }
-
-    public String getOptionD() {
-        return optionD;
-    }
-
-    public String getOptionC() {
-        return optionC;
-    }
-
     public String getCorrectAnswer() {
         return correctAnswer;
     }
-}
 
+    public String toString() {
+        return question + "::" + optionA + "::" + optionB + "::" + optionC + "::" + optionD;
+    }
+}

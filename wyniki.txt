@@ -1,5 +1,3 @@
-antek score: 3
-maciek score: 5
-bartek score: 4
-piotrek score: 2
-patryk score: 2
+bartek: 1.0
+maciek: 3.0
+antek: 0.0

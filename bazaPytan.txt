@@ -1,5 +1,30 @@
-1. Jakie jest główne przeznaczenie języka Java?,A. Programowanie stron internetowych,B. Programowanie systemowe,C. Programowanie obiektowe,D. Programowanie funkcyjne,A
-2. Co to jest polimorfizm?,A. Możliwość posiadania wielu form,B. Zmienna przechowująca wiele wartości,C. Typ danych w Javie,D. Kolekcja obiektów,A
-3. Jakie jest znaczenie słowa kluczowego "static" w Javie?,A. Tworzenie obiektów,B. Dostęp do składowych klasy bez konieczności tworzenia obiektu,C. Implementacja interfejsów,D. Kontrola dostępu do zmiennych,A
-4. Co oznacza skrót "JVM"?,A. Java Very Large Memory,B. Java Virtual Machine,C. Java Visual Model,D. Język Virtual Machine,A
-5. Która klasa jest podstawową klasą dla obsługi wejścia-wyjścia w Javie?,A. File,B. InputStream,C. Reader,D. ObjectStream,A
+Jakie jest główne przeznaczenie języka Java?
+a. Programowanie stron internetowych
+b. Programowanie systemowe
+c. Programowanie obiektowe
+d. Programowanie funkcyjne
+c
+Co to jest polimorfizm?
+a. Możliwość posiadania wielu form
+b. Zmienna przechowująca wiele wartości
+c. Typ danych w Javie
+d. Kolekcja obiektów
+a
+Co oznacza skrót "JVM"?
+a. Java Very Large Memory
+b. Java Virtual Machine
+c. Java Visual Model
+d. Język Virtual Machine
+b
+Która klasa jest podstawową klasą dla obsługi wejścia-wyjścia w Javie?
+a. File
+b. InputStream
+c. Reader
+d. ObjectStream
+d
+Jakie jest znaczenie słowa kluczowego "static" w Javie?
+a. Tworzenie obiektów
+b. Dostęp do składowych klasy bez konieczności tworzenia obiektu
+c. Implementacja interfejsów
+d. Kontrola dostępu do zmiennych
+b
